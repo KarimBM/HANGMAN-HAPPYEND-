@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>JEU DU PENDU</title>
+		<!--Perso CSS -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Bitter:400,700" />
+		<link rel="stylesheet" type="text/css" href="css/flexslider.css" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<!-- Perso JS -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	</head>
+
+	<body>
+		<div id="chooseDifficulty">
+			<h1>LE JEU DU PENDU </h1>
+			<h5>Choisis ton niveau</h5>
+			<button title="très facile" onclick="chooseDif1()">Facile</button>
+			<button title="simple" onclick="chooseDif2()">Normal</button>
+			<button title="un peu dur" onclick="chooseDif3()">Difficile</button>
+		</div>
+		<div id="startButton">
+			<h1>Devine le mot</h1>
+			<!-- <button onclick="start()">Débuter le jeu</button> -->
+			<p>Amuse toi bien !</p>
+		</div>
+		<div id="mainGame">
+			<p id="question"></p>
+			<input type="text" id="guess" maxlength="1" placeholder="Tape une lettre ...&#x23ce;">
+			<div>
+				<button id="searchButton" type="button" onclick="enterGuess()"> Valide ici</button>
+			</div>
+		</div>
+		<div id="RRguess">
+			<p id="rightGuess"></p>
+			<p id ="wrongGuess"></p>
+			<p id ="guessesLeft"></p>
+		</div>
+		<div id="youLose">
+			<h2>Tu as perdu !! </h2>
+			<div>
+				<button onclick="restart()">On joue encore ? </button>
+			</div>
+			<p id="correctWordWas"></p>
+		</div>
+		<div id="youWin">
+			<h3>Tu as gagné !!!!! </h3>
+			<div>
+				<button onclick="restart()">On joue encore ?</button>
+			</div>
+		</div>
+	</body>
+	<script src="js/main.js"></script>
+</html>
